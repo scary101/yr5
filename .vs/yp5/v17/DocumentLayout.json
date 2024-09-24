@@ -1,0 +1,131 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u0412\u0435\u0440\u0430\\Desktop\\C#\\yp5\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1E058352-F8B6-44D6-974F-5BF45097ACDF}|yp5\\yp5.csproj|c:\\users\\\u0432\u0435\u0440\u0430\\desktop\\c#\\yp5\\yp5\\userwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1E058352-F8B6-44D6-974F-5BF45097ACDF}|yp5\\yp5.csproj|solutionrelative:yp5\\userwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E058352-F8B6-44D6-974F-5BF45097ACDF}|yp5\\yp5.csproj|c:\\users\\\u0432\u0435\u0440\u0430\\desktop\\c#\\yp5\\yp5\\userwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E058352-F8B6-44D6-974F-5BF45097ACDF}|yp5\\yp5.csproj|solutionrelative:yp5\\userwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E058352-F8B6-44D6-974F-5BF45097ACDF}|yp5\\yp5.csproj|c:\\users\\\u0432\u0435\u0440\u0430\\desktop\\c#\\yp5\\yp5\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E058352-F8B6-44D6-974F-5BF45097ACDF}|yp5\\yp5.csproj|solutionrelative:yp5\\adminwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E058352-F8B6-44D6-974F-5BF45097ACDF}|yp5\\yp5.csproj|C:\\Users\\\u0412\u0435\u0440\u0430\\Desktop\\C#\\yp5\\yp5\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1E058352-F8B6-44D6-974F-5BF45097ACDF}|yp5\\yp5.csproj|solutionrelative:yp5\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E058352-F8B6-44D6-974F-5BF45097ACDF}|yp5\\yp5.csproj|c:\\users\\\u0432\u0435\u0440\u0430\\desktop\\c#\\yp5\\yp5\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E058352-F8B6-44D6-974F-5BF45097ACDF}|yp5\\yp5.csproj|solutionrelative:yp5\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E058352-F8B6-44D6-974F-5BF45097ACDF}|yp5\\yp5.csproj|c:\\users\\\u0432\u0435\u0440\u0430\\desktop\\c#\\yp5\\yp5\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{1E058352-F8B6-44D6-974F-5BF45097ACDF}|yp5\\yp5.csproj|solutionrelative:yp5\\adminwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0435\u0440\u0430\\Desktop\\C#\\yp5\\yp5\\AdminWindow.xaml.cs",
+              "RelativeDocumentMoniker": "yp5\\AdminWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0435\u0440\u0430\\Desktop\\C#\\yp5\\yp5\\AdminWindow.xaml.cs",
+              "RelativeToolTip": "yp5\\AdminWindow.xaml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T18:47:31.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0435\u0440\u0430\\Desktop\\C#\\yp5\\yp5\\UserWindow.xaml.cs",
+              "RelativeDocumentMoniker": "yp5\\UserWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0435\u0440\u0430\\Desktop\\C#\\yp5\\yp5\\UserWindow.xaml.cs",
+              "RelativeToolTip": "yp5\\UserWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T18:47:27.369Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0435\u0440\u0430\\Desktop\\C#\\yp5\\yp5\\UserWindow.xaml",
+              "RelativeDocumentMoniker": "yp5\\UserWindow.xaml",
+              "ToolTip": "C:\\Users\\\u0412\u0435\u0440\u0430\\Desktop\\C#\\yp5\\yp5\\UserWindow.xaml",
+              "RelativeToolTip": "yp5\\UserWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-24T18:37:45.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0435\u0440\u0430\\Desktop\\C#\\yp5\\yp5\\AdminWindow.xaml",
+              "RelativeDocumentMoniker": "yp5\\AdminWindow.xaml",
+              "ToolTip": "C:\\Users\\\u0412\u0435\u0440\u0430\\Desktop\\C#\\yp5\\yp5\\AdminWindow.xaml",
+              "RelativeToolTip": "yp5\\AdminWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-24T18:37:30.364Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0435\u0440\u0430\\Desktop\\C#\\yp5\\yp5\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "yp5\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\\u0412\u0435\u0440\u0430\\Desktop\\C#\\yp5\\yp5\\MainWindow.xaml.cs",
+              "RelativeToolTip": "yp5\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-24T15:47:02.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\\u0412\u0435\u0440\u0430\\Desktop\\C#\\yp5\\yp5\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "yp5\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\\u0412\u0435\u0440\u0430\\Desktop\\C#\\yp5\\yp5\\MainWindow.xaml",
+              "RelativeToolTip": "yp5\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-24T15:47:03.38Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

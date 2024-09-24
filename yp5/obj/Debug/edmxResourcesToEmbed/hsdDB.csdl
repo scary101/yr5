@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="hsdModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ItemCategories">
+    <Key>
+      <PropertyRef Name="CategoryID" />
+    </Key>
+    <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Items" Relationship="Self.FK__Items__CategoryI__3F466844" FromRole="ItemCategories" ToRole="Items" />
+  </EntityType>
+  <EntityType Name="ItemPrices">
+    <Key>
+      <PropertyRef Name="PriceID" />
+    </Key>
+    <Property Name="PriceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemID" Type="Int32" />
+    <Property Name="Price" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="PriceDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Items" Relationship="Self.FK__ItemPrice__ItemI__4316F928" FromRole="ItemPrices" ToRole="Items" />
+  </EntityType>
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="ItemID" />
+    </Key>
+    <Property Name="ItemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CategoryID" Type="Int32" />
+    <Property Name="TypeID" Type="Int32" />
+    <NavigationProperty Name="ItemCategories" Relationship="Self.FK__Items__CategoryI__3F466844" FromRole="Items" ToRole="ItemCategories" />
+    <NavigationProperty Name="ItemPrices" Relationship="Self.FK__ItemPrice__ItemI__4316F928" FromRole="Items" ToRole="ItemPrices" />
+    <NavigationProperty Name="ItemTypes" Relationship="Self.FK__Items__TypeID__403A8C7D" FromRole="Items" ToRole="ItemTypes" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__ItemI__4AB81AF0" FromRole="Items" ToRole="OrderDetails" />
+    <NavigationProperty Name="PurchaseHistory" Relationship="Self.FK__PurchaseH__ItemI__4E88ABD4" FromRole="Items" ToRole="PurchaseHistory" />
+  </EntityType>
+  <EntityType Name="ItemTypes">
+    <Key>
+      <PropertyRef Name="TypeID" />
+    </Key>
+    <Property Name="TypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Items" Relationship="Self.FK__Items__TypeID__403A8C7D" FromRole="ItemTypes" ToRole="Items" />
+  </EntityType>
+  <EntityType Name="OrderDetails">
+    <Key>
+      <PropertyRef Name="OrderDetailID" />
+    </Key>
+    <Property Name="OrderDetailID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderID" Type="Int32" />
+    <Property Name="ItemID" Type="Int32" />
+    <Property Name="Quantity" Type="Int32" />
+    <NavigationProperty Name="Items" Relationship="Self.FK__OrderDeta__ItemI__4AB81AF0" FromRole="OrderDetails" ToRole="Items" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__OrderDeta__Order__49C3F6B7" FromRole="OrderDetails" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlayerID" Type="Int32" />
+    <Property Name="ShopID" Type="Int32" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="OrderDetails" Relationship="Self.FK__OrderDeta__Order__49C3F6B7" FromRole="Orders" ToRole="OrderDetails" />
+    <NavigationProperty Name="Players" Relationship="Self.FK__Orders__PlayerID__45F365D3" FromRole="Orders" ToRole="Players" />
+    <NavigationProperty Name="Shops" Relationship="Self.FK__Orders__ShopID__46E78A0C" FromRole="Orders" ToRole="Shops" />
+  </EntityType>
+  <EntityType Name="Players">
+    <Key>
+      <PropertyRef Name="PlayerID" />
+    </Key>
+    <Property Name="PlayerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlayerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PlayerRank" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RegistrationDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__PlayerID__45F365D3" FromRole="Players" ToRole="Orders" />
+    <NavigationProperty Name="PurchaseHistory" Relationship="Self.FK__PurchaseH__Playe__4D94879B" FromRole="Players" ToRole="PurchaseHistory" />
+  </EntityType>
+  <EntityType Name="PurchaseHistory">
+    <Key>
+      <PropertyRef Name="PurchaseID" />
+    </Key>
+    <Property Name="PurchaseID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlayerID" Type="Int32" />
+    <Property Name="ItemID" Type="Int32" />
+    <Property Name="PurchaseDate" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Items" Relationship="Self.FK__PurchaseH__ItemI__4E88ABD4" FromRole="PurchaseHistory" ToRole="Items" />
+    <NavigationProperty Name="Players" Relationship="Self.FK__PurchaseH__Playe__4D94879B" FromRole="PurchaseHistory" ToRole="Players" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__Users__RoleID__534D60F1" FromRole="Roles" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Shops">
+    <Key>
+      <PropertyRef Name="ShopID" />
+    </Key>
+    <Property Name="ShopID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ShopName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ShopLocation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK__Orders__ShopID__46E78A0C" FromRole="Shops" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordHash" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="RoleID" Type="Int32" />
+    <NavigationProperty Name="Roles" Relationship="Self.FK__Users__RoleID__534D60F1" FromRole="Users" ToRole="Roles" />
+  </EntityType>
+  <Association Name="FK__Items__CategoryI__3F466844">
+    <End Role="ItemCategories" Type="Self.ItemCategories" Multiplicity="0..1" />
+    <End Role="Items" Type="Self.Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemCategories">
+        <PropertyRef Name="CategoryID" />
+      </Principal>
+      <Dependent Role="Items">
+        <PropertyRef Name="CategoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ItemPrice__ItemI__4316F928">
+    <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+    <End Role="ItemPrices" Type="Self.ItemPrices" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="ItemPrices">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Items__TypeID__403A8C7D">
+    <End Role="ItemTypes" Type="Self.ItemTypes" Multiplicity="0..1" />
+    <End Role="Items" Type="Self.Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemTypes">
+        <PropertyRef Name="TypeID" />
+      </Principal>
+      <Dependent Role="Items">
+        <PropertyRef Name="TypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__ItemI__4AB81AF0">
+    <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+    <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PurchaseH__ItemI__4E88ABD4">
+    <End Role="Items" Type="Self.Items" Multiplicity="0..1" />
+    <End Role="PurchaseHistory" Type="Self.PurchaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Items">
+        <PropertyRef Name="ItemID" />
+      </Principal>
+      <Dependent Role="PurchaseHistory">
+        <PropertyRef Name="ItemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__OrderDeta__Order__49C3F6B7">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="0..1" />
+    <End Role="OrderDetails" Type="Self.OrderDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="OrderID" />
+      </Principal>
+      <Dependent Role="OrderDetails">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__PlayerID__45F365D3">
+    <End Role="Players" Type="Self.Players" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Players">
+        <PropertyRef Name="PlayerID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="PlayerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Orders__ShopID__46E78A0C">
+    <End Role="Shops" Type="Self.Shops" Multiplicity="0..1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Shops">
+        <PropertyRef Name="ShopID" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="ShopID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PurchaseH__Playe__4D94879B">
+    <End Role="Players" Type="Self.Players" Multiplicity="0..1" />
+    <End Role="PurchaseHistory" Type="Self.PurchaseHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Players">
+        <PropertyRef Name="PlayerID" />
+      </Principal>
+      <Dependent Role="PurchaseHistory">
+        <PropertyRef Name="PlayerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Users__RoleID__534D60F1">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="hsdEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ItemCategories" EntityType="Self.ItemCategories" />
+    <EntitySet Name="ItemPrices" EntityType="Self.ItemPrices" />
+    <EntitySet Name="Items" EntityType="Self.Items" />
+    <EntitySet Name="ItemTypes" EntityType="Self.ItemTypes" />
+    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetails" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" />
+    <EntitySet Name="Players" EntityType="Self.Players" />
+    <EntitySet Name="PurchaseHistory" EntityType="Self.PurchaseHistory" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" />
+    <EntitySet Name="Shops" EntityType="Self.Shops" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <AssociationSet Name="FK__Items__CategoryI__3F466844" Association="Self.FK__Items__CategoryI__3F466844">
+      <End Role="ItemCategories" EntitySet="ItemCategories" />
+      <End Role="Items" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ItemPrice__ItemI__4316F928" Association="Self.FK__ItemPrice__ItemI__4316F928">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="ItemPrices" EntitySet="ItemPrices" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Items__TypeID__403A8C7D" Association="Self.FK__Items__TypeID__403A8C7D">
+      <End Role="ItemTypes" EntitySet="ItemTypes" />
+      <End Role="Items" EntitySet="Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__ItemI__4AB81AF0" Association="Self.FK__OrderDeta__ItemI__4AB81AF0">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PurchaseH__ItemI__4E88ABD4" Association="Self.FK__PurchaseH__ItemI__4E88ABD4">
+      <End Role="Items" EntitySet="Items" />
+      <End Role="PurchaseHistory" EntitySet="PurchaseHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__OrderDeta__Order__49C3F6B7" Association="Self.FK__OrderDeta__Order__49C3F6B7">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="OrderDetails" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__PlayerID__45F365D3" Association="Self.FK__Orders__PlayerID__45F365D3">
+      <End Role="Players" EntitySet="Players" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Orders__ShopID__46E78A0C" Association="Self.FK__Orders__ShopID__46E78A0C">
+      <End Role="Shops" EntitySet="Shops" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PurchaseH__Playe__4D94879B" Association="Self.FK__PurchaseH__Playe__4D94879B">
+      <End Role="Players" EntitySet="Players" />
+      <End Role="PurchaseHistory" EntitySet="PurchaseHistory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__RoleID__534D60F1" Association="Self.FK__Users__RoleID__534D60F1">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
